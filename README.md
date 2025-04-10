@@ -17,18 +17,19 @@ This repository contains a Node.js project that implements the functionalities r
 ### 1. Clone the Repository
 
 Clone the repository to your local machine:
-
+```base
 git clone https://github.com/your-username/repository-name.git
 cd repository-name
 
 ### 2. Install Dependencies
 
 Run the following command to install all necessary dependencies:
-
+```base
 npm install
 
 
 Create a .env file in the root directory and add the following environment variables:
+```base
 MONGO_URI=mongodb://localhost:27017/your-database
 PORT=5000
 
@@ -76,3 +77,14 @@ This will start the server on port 5000 by default. You can modify the port in t
     "day": "YYYY-MM-DD",
     "time": "HH:mm"
   }
+
+## 6. Graceful Shutdown & Restart
+The application gracefully shuts down on receiving termination signals (e.g., SIGINT, SIGTERM). A child process is used to monitor and restart the server in case of high CPU usage (above 70%).
+
+## 7. Notes
+
+- **Worker Threads**: Used to handle the CSV or XLSX data parsing to prevent blocking the main event loop.
+- **MongoDB**: Used for storing various entities like Agent, User, Policy, etc. Each entity is represented as a separate collection.
+- **Real-Time CPU Monitoring**: Uses the `os` module and `worker_threads` to monitor CPU utilization and restart the server if necessary.
+- **node-cron**: Used to schedule tasks like inserting messages at a specified time.
+
