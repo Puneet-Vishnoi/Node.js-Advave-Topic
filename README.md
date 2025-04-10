@@ -51,27 +51,30 @@ This will start the server on port 5000 by default. You can modify the port in t
 ## Task 1: Data Management APIs
 
 ### 1. Upload Data
-- **Route**: `POST /upload`
+- **Route**: `POST /api/upload`
 - **Description**: Uploads an XLSX or CSV file to MongoDB using worker threads.
 - **Payload**: Multipart form-data with file (.csv or .xlsx).
 
 ### 2. Search Policy by Username
-- **Route**: `GET /policy/:username`
+- **Route**: `GET /api/search/policy?name=:username`
 - **Description**: Fetch policy information based on the username.
 - **Parameters**:
   - `username` (string) - The username for which policy data is to be fetched.
 
 ### 3. Aggregated Policy by User
-- **Route**: `GET /aggregated-policies`
+- **Route**: `GET /api/search/aggregate`
 - **Description**: Get aggregated policy information for each user.
 
 ## Task 2: Utility APIs
 
 ### 1. Real-Time CPU Monitoring & Server Restart
 - **Description**: The system continuously monitors CPU usage and restarts the server if CPU usage exceeds 70%.
+- ##### Get CPU Usage Logs
+- **Route**: `GET /api/cpu-logs`
+- **Description**: Retrieves a list of CPU usage logs stored in MongoDB, which includes the CPU usage percentage and th
 
 ### 2. Scheduled Message Insertion
-- **Route**: `POST /schedule-message`
+- **Route**: `POST /api/messages/schedule-message`
 - **Description**: Schedules a message to be inserted into the database at a specific day and time.
 - **Payload**:
   ```json
