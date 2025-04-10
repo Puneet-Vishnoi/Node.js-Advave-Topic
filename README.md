@@ -21,27 +21,29 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-username/repository-name.git
 cd repository-name
+```
 
 ### 2. Install Dependencies
 
 Run the following command to install all necessary dependencies:
 ```base
 npm install
-
+```
 
 Create a .env file in the root directory and add the following environment variables:
 ```base
 MONGO_URI=mongodb://localhost:27017/your-database
 PORT=5000
-
+```
 MONGO_URI: The connection string to your MongoDB instance.
 
 PORT: The port number on which the server will run.
 
 4. Run the Application
 To start the application, run the following command:
-
+```base
 npm start
+```
 This will start the server on port 5000 by default. You can modify the port in the .env file.
 
 # Available APIs
