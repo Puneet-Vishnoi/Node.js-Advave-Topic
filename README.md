@@ -17,7 +17,8 @@ This repository contains a Node.js project that implements the functionalities r
 ### 1. Clone the Repository
 
 Clone the repository to your local machine:
-```base
+
+```bash
 git clone https://github.com/your-username/repository-name.git
 cd repository-name
 
