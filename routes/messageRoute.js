@@ -14,6 +14,11 @@ router.post('/schedule-message', async (req, res) => {
   try {
     // Parse the day and time into a Date object
     const scheduledDate = new Date(`${day} ${time}`);
+    const timestamp = scheduledDate.getTime();
+    
+    if(timestamp< Date.now()){
+      return res.status(400).json({ error: 'Message, day, and time are should be ahead of current time' });
+    }
 
     // Create a new message in the DB
     const newMessage = new Message({

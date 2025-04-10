@@ -42,7 +42,7 @@ PORT: The port number on which the server will run.
 4. Run the Application
 To start the application, run the following command:
 ```base
-npm start
+node monitor.js
 ```
 This will start the server on port 5000 by default. You can modify the port in the .env file.
 
@@ -70,7 +70,7 @@ This will start the server on port 5000 by default. You can modify the port in t
 ### 1. Real-Time CPU Monitoring & Server Restart
 - **Description**: The system continuously monitors CPU usage and restarts the server if CPU usage exceeds 70%.
 ### 1.1 Get CPU Usage Logs
-- **Route**: `GET /api/cpu-logs`
+- **Route**: `GET /api/monitor/cpu-logs`
 - **Description**: Retrieves a list of CPU usage logs stored in MongoDB, which includes the CPU usage percentage and the timestamp of when it was logged.
 
 ### 2. Scheduled Message Insertion
