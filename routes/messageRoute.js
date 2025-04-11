@@ -53,9 +53,6 @@ cron.schedule('* * * * *', async () => {
     // Send each message and mark as sent
     for (const message of messagesToSend) {
       console.log(`Sending message: ${message.message}`);
-      
-      // Here you would trigger the logic to actually send the message, e.g., sending email or SMS
-      // For this example, we are just logging it.
 
       // Mark the message as sent in the database
       await Message.findByIdAndUpdate(message._id, { sent: true });
