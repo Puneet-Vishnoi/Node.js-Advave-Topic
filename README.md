@@ -19,8 +19,8 @@ This repository contains a Node.js project that implements the functionalities r
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/repository-name.git
-cd repository-name
+git clone [https://github.com/your-username/repository-name.git](https://github.com/Puneet-Vishnoi/Assessment-Insuredmine.git)
+cd Assessment-Insuredmine
 ```
 
 ### 2. Install Dependencies
@@ -32,7 +32,7 @@ npm install
 
 Create a .env file in the root directory and add the following environment variables:
 ```base
-MONGO_URI=mongodb://localhost:27017/your-database
+MONGO_URI=mongodb://localhost:27017/Assesment
 PORT=5000
 ```
 MONGO_URI: The connection string to your MongoDB instance.
@@ -68,7 +68,7 @@ This will start the server on port 5000 by default. You can modify the port in t
 ## Task 2: Utility APIs
 
 ### 1. Real-Time CPU Monitoring & Server Restart
-- **Description**: The system continuously monitors CPU usage and restarts the server if CPU usage exceeds 70%.
+- **Description**:   The system continuously monitors CPU usage in real time. If CPU usage exceeds **70%**, the server automatically restarts using Node.js **child processes** to ensure application stability.
 ### 1.1 Get CPU Usage Logs
 - **Route**: `GET /api/monitor/cpu-logs`
 - **Description**: Retrieves a list of CPU usage logs stored in MongoDB, which includes the CPU usage percentage and the timestamp of when it was logged.
