@@ -1,6 +1,6 @@
-# Assessment-Insuredmine
+# File Upload, CSV Parser, Worker Thread, Cron-Job, Worker Thread
 
-This repository contains a Node.js project that implements the functionalities required for the technical assessment. It covers tasks such as uploading CSV data to MongoDB, searching policies, aggregating user policies, tracking real-time CPU usage, and scheduling messages.
+This repository contains a Node.js project that implements various functionalities. It covers tasks such as uploading CSV data to MongoDB, searching policies, aggregating user policies, tracking real-time CPU usage, and scheduling messages.
 
 ## Tech Stack:
 - **Node.js**
